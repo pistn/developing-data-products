@@ -80,6 +80,7 @@ shinyServer(
       ###################################knn
       else if(input$clsfier=="knn"){
       
+        library(class)
       
       classif <- knn(train, test, cl, k = 15, prob=TRUE)
       prob <- attr(classif, "prob")
